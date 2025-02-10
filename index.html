@@ -8,10 +8,14 @@
 	  function changeMonkey() {
 	    document.getElementById("pictures").src = "https://i.imgur.com/KlYo7pc.jpeg";
 		document.getElementById("picturesdsc").innerHTML = "This is a picture of a Monkey";
+		document.getElementById("desctitle").innerHTML = "A Monkey";
+		document.getElementById("desc").innerHTML = "Monkey is a common name that may refer to most mammals of the infraorder Simiiformes, also known as simians. Traditionally, all animals in the group now known as simians are counted as monkeys except the apes. Thus monkeys, in that sense, constitute an incomplete paraphyletic grouping; however, in the broader sense based on cladistics, apes (Hominoidea) are also included, making the terms monkeys and simians synonyms in regard to their scope.";
 	  }
 	  function changeCat() {
 	    document.getElementById("pictures").src = "https://i.imgur.com/g0mqGcn.jpeg";
 		document.getElementById("picturesdsc").innerHTML = "This is a picture of a Cat";
+		document.getElementById("desctitle").innerHTML = "A Cat";
+		document.getElementById("desc").innerHTML = "The cat (Felis catus), also referred to as the domestic cat, is a small domesticated carnivorous mammal. It is the only domesticated species of the family Felidae. Advances in archaeology and genetics have shown that the domestication of the cat occurred in the Near East around 7500 BC. It is commonly kept as a pet and farm cat, but also ranges freely as a feral cat avoiding human contact. It is valued by humans for companionship and its ability to kill vermin.";
 		}
 	</script>
     <div>
@@ -24,6 +28,9 @@
 	    <img src="https://i.imgur.com/g0mqGcn.jpeg" alt="Golded Fur Angry Cat" style="width:300px;height:400px;" id="pictures">
 	    <button type="button" onclick="changeMonkey()">Monkey</button>
 		<button type="Button" onclick="changeCat()">Cat</button>
+		<br>
+		<h3 id="desctitle"></h3>
+		<p id="desc"></p>
 		<br>
 		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ target="_blank">Click Here for the Author of the Picture</a>
 	</div>
