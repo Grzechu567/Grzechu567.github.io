@@ -10,10 +10,10 @@
 	    <p>This is my Testing Site for Learning HTML, Java, etc...</p>
 	  </body>
 	    <h2>Picture Test</h2>
-	    <p>Here you can see a Picture of a cute Cat</p>
+	    <p id="pictures"></p>
 	    <img src="https://i.imgur.com/g0mqGcn.jpeg" alt="Golded Fur Angry Cat" style="width:300px;height:400px;" id="pictures">
-	    <button onclick="document.getElementById('pictures').src='https://i.imgur.com/KlYo7pc.jpeg'">Change the Picture</button>
-		<button onclick="document.getElementById('pictures').src='https://i.imgur.com/g0mqGcn.jpeg'">Previous Picture</button>
+	    <button onclick="document.getElementById('pictures').src=('https://i.imgur.com/KlYo7pc.jpeg').innerHTML=('Here you can see a Picture of a Cute Monkey.')">Monkey</button>
+		<button onclick="document.getElementById('pictures').src=('https://i.imgur.com/g0mqGcn.jpeg').innerHTML=('Here you can see a Picture of a Cute Cat.')">Cat</button>
 		<br>
 		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ target="_blank">Click Here for the Author of the Picture</a>
 	</div>
@@ -26,7 +26,7 @@
 	<br>
 	<br>
 	  <h4 id="sraczka"></h4>
-	  <button onclick="document.getElementById('sraczka').innerHTML = 'The Monkey is showing a Middle Finger.'">Monkey</button>
+	  <button onclick="document.getElementById('sraczka').innerHTML=('The Monkey is showing a Middle Finger.'">Monkey</button>
 	  <button onclick="document.getElementById('sraczka').innerHTML = 'Angry Cute Cat is sitting.'">Cat</button>
 	<br>
 	<div>
