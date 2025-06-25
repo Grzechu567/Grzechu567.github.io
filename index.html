@@ -1,62 +1,131 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TestingGround</title>
+  <title id="header">TestingGround</title>
 </head>
   <body>
     <script>
 	  // This script is to change the Picture, Title, DescTitle, and Desc matching the Pictrue of a Monkey
 	  function changeMonkey() {
-	    document.getElementById("pictures").src = "https://i.imgur.com/KlYo7pc.jpeg";
+	    document.getElementById("pictures").src = "../images/monkey.jpeg";
 		document.getElementById("picturesdsc").innerHTML = "This is a picture of a Monkey";
 		document.getElementById("desctitle").innerHTML = "A Monkey";
 		document.getElementById("desc").innerHTML = "Monkey is a common name that may refer to most mammals of the infraorder Simiiformes, also known as simians. <br> Traditionally, all animals in the group now known as simians are counted as monkeys except the apes. <br> Thus monkeys, in that sense, constitute an incomplete paraphyletic grouping; however, <br> in the broader sense based on cladistics, apes (Hominoidea) are also included, making the terms monkeys and simians synonyms in regard to their scope.";
 	  }
 	  // This Script is to change the Picture, Title, DescTitle, and Desc matching the Picture of a Cat
 	  function changeCat() {
-	    document.getElementById("pictures").src = "https://i.imgur.com/g0mqGcn.jpeg";
+	    document.getElementById("pictures").src = "../images/cat.jpeg";
 		document.getElementById("picturesdsc").innerHTML = "This is a picture of a Cat";
 		document.getElementById("desctitle").innerHTML = "A Cat";
 		document.getElementById("desc").innerHTML = "The cat (Felis catus), also referred to as the domestic cat, is a small domesticated carnivorous mammal. <br> It is the only domesticated species of the family Felidae. Advances in archaeology and genetics have shown that the domestication of the cat occurred in the Near East around 7500 BC. <br> It is commonly kept as a pet and farm cat, but also ranges freely as a feral cat avoiding human contact. <br> It is valued by humans for companionship and its ability to kill vermin.";
 		}
 	  function changeBear() {
-	  document.getElementById("pictures").src = "https://i.imgur.com/agNHNiC.png";
-	  document.getElementById("picturesdesc").innerHTML = "This is a Picture of a Bear";
+	  document.getElementById("pictures").src = "../images/bear.png";
+	  document.getElementById("picturesdsc").innerHTML = "This is a Picture of a Bear";
 	  document.getElementById("desctitle").innerHTML = "A Bear";
 	  document.getElementById("desc").innerHTML = "Bears are carnivoran mammals of the family Ursidae. They are classified as caniforms, or doglike carnivorans. Although only eight species of bears are extant, they are widespread, appearing in a wide variety of habitats throughout most of the Northern Hemisphere and partially in the Southern Hemisphere. Bears are found on the continents of North America, South America, and Eurasia. Common characteristics of modern bears include large bodies with stocky legs, long snouts, small rounded ears, shaggy hair, plantigrade paws with five nonretractile claws, and short tails.";
 	  }
 	</script>
     <div>
-	  <Button type="Button" onclick="changeLangENG()">ENG</Button>
-	  <Button type="Button" onclick="changeLangPL()">PL</Button>
+	  <Button type="Button" onclick="changeLangENG()" id="eng">ENG</Button>
+	  <Button type="Button" onclick="changeLangPL()" id="pl">PL</Button>
 	  
 	  <script>
 		// This is a script to change the Language of the Site to English
 		function changeLangENG() {
-			document.getElementById("Welcome").innerHTML = "Hello"
-			document.getElementById("introduction").innerHTML = "This is my Testing Site for Learning HTML, Java, etc..."
-			document.getElementById("pictest").innerHTML = "Picture Test"
+			document.getElementById("Welcome").innerHTML = "Hello";
+			document.getElementById("introduction").innerHTML = "This is my Testing Site for Learning HTML, Java, etc...";
+			document.getElementById("pictest").innerHTML = "Picture Test";
+			document.getElementById("header").innerHTML = "TestingGround";
+			document.getElementById("buttoncat").innerHTML = "Cat";
+			document.getElementById("buttonmonkey").innerHTML = "Monkey";
+			document.getElementById("buttonbear").innerHTML = "Bear";
+			document.getElementById("dropdown").innerHTML = "Select Animal";
 			}
 		// This is a script to change the Language of the Site to Polish
 		function changeLangPL() {
-			document.getElementById("Welcome").innerHTML = "Witam"
-			document.getElementById("introduction").innerHTML = "To jest moja strona do uczenia sie podstaw HTML, Java, itd..."
-			document.getElementById("pictest").innerHTML = "Test Zdjecia"
+			document.getElementById("Welcome").innerHTML = "Witam";
+			document.getElementById("introduction").innerHTML = "To jest moja strona do uczenia sie podstaw HTML, Java, itd...";
+			document.getElementById("pictest").innerHTML = "Test Zdjecia";
+			document.getElementById("buttoncat").innerHTML = "Kot";
+			document.getElementById("buttonmonkey").innerHTML = "Malpa";
+			document.getElementById("buttonbear").innerHTML = "Niedzwiedz";
+			document.getElementById("dropdown").innerHTML = "Wybierz Zwierze";
 			}
+		const button = document.getElementById("pl");
+		button.addEventListener("onclick", function() {
+			alert("button pressed!")
+		});
 	  </script>
 	  
 	</div>
-	<div>
       <body style="background-color:gray;">
 	    <h1 id="Welcome">Hello</h1>
 	    <p id="introduction">This is my Testing Site for Learning HTML, Java, etc...</p>
 	  </body>
 	    <h2 id="pictest">Picture Test</h2>
 	    <p id="picturesdsc"></p>
-	    <img src="https://i.imgur.com/g0mqGcn.jpeg" alt="Golded Fur Angry Cat" style="width:300px;height:400px;" id="pictures">
-	    <button type="Button" onclick="changeMonkey()">Monkey</button>
-		<button type="Button" onclick="changeCat()">Cat</button>
-		<button type="Button" onclick="changeBear()">Bear</button>
+	    <img src="../images/cat.jpeg" alt="Golded Fur Angry Cat" style="width:300px;height:400px;" id="pictures">
+		<br>
+		<div>
+		<style>
+			.dropbtn {
+				background-color: bisque;
+				color: white;
+				padding: 16px;
+				font-size: 16px;
+				border: none;
+				cursor: pointer;
+			}
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: transparent;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+			}
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+			.dropdown-content a:hover {background-color: #f1f1f1;}
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+			.dropdown:hover .dropbtn {
+				background-color: brown;
+			}
+			.buttondrp {
+				background-color: white;
+				color: black;
+				border: 2px solid green;
+				width: 100%;
+				height: 50px;
+				border-radius: 8px;
+			}
+			.buttondrp:hover {
+				background-color: green;
+				color: white;
+				transition-duration: 0.4s;
+			}
+		</style>
+			<div class="dropdown">
+			<button class="dropbtn" id="dropdown">Select Animal</button>
+			<div class="dropdown-content" width="100%">
+				<button class="buttondrp" type="button" onclick="changeCat()" id="buttoncat">Cat</button>
+				<br>
+				<button class="buttondrp" type="button" onclick="changeBear()" id="buttonbear">Bear</button>
+				<br>
+				<button class="buttondrp" type="button" onclick="changeMonkey()" id="buttonmonkey">Monkey</button>
+			</div>
+		</div>
 		<br>
 		<h3 id="desctitle"></h3>
 		<p id="desc"></p>
@@ -80,7 +149,7 @@
 	<div>
 	  <form>
 	    <input type="text" name="quiz" placeholder="What Animals shows middle Finger?"
-		<button type="submit">Submit</button>
+		<button type="submit" id="submit">Submit</button>
 	  </form>
 	</div>
 	<br>
