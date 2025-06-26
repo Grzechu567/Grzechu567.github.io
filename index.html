@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title id="header">TestingGround</title>
+  <title class="center" id="header">TestingGround</title>
 </head>
   <body>
     <script>
@@ -27,8 +27,8 @@
 	  }
 	</script>
     <div>
-	  <Button type="Button" onclick="changeLangENG()" id="eng">ENG</Button>
-	  <Button type="Button" onclick="changeLangPL()" id="pl">PL</Button>
+	  <Button class="engbutton" type="Button" onclick="changeLangENG()" id="eng">ENG</Button>
+	  <Button class="plbutton" type="Button" onclick="changeLangPL()" id="pl">PL</Button>
 	  
 	  <script>
 		// This is a script to change the Language of the Site to English
@@ -60,12 +60,12 @@
 	  
 	</div>
       <body style="background-color:gray;">
-	    <h1 id="Welcome">Hello</h1>
-	    <p id="introduction">This is my Testing Site for Learning HTML, Java, etc...</p>
+	    <h1 class="center" id="Welcome">Hello</h1>
+	    <p class="center" id="introduction">This is my Testing Site for Learning HTML, Java, etc...</p>
 	  </body>
-	    <h2 id="pictest">Picture Test</h2>
-	    <p id="picturesdsc"></p>
-	    <img src="../images/cat.jpeg" alt="Golded Fur Angry Cat" style="width:300px;height:400px;" id="pictures">
+	    <h2 class="center" id="pictest">Picture Test</h2>
+	    <p class="center" id="picturesdsc"></p>
+	    <img src="../images/cat.jpeg" alt="Golded Fur Angry Cat" style="width:300px;height:400px;" class="center" id="pictures">
 		<br>
 		<div>
 		<style>
@@ -76,8 +76,12 @@
 				font-size: 16px;
 				border: none;
 				cursor: pointer;
-				border: 2px solid green;
+				border: 3px solid green;
 				border-radius: 8px;
+				animation-name: bttnanim;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-delay: 2s;
 			}
 			.dropdown {
 				position: relative;
@@ -118,6 +122,44 @@
 				color: white;
 				transition-duration: 0.4s;
 			}
+			.txtbackground {
+				background-color: green;
+				opacity: 0.6;
+			}
+			body {
+				background-image: url("../images/bckground.jpg");
+				width: 100%;
+				height: 100%;
+			}
+			.center {
+				text-align: center;
+			}
+			img {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.engbutton {
+				background-image: url(../images/eng.jpg);
+			}
+			.plbutton {
+				background-image: url(../images/pl.jpg);	
+			}
+			.bttmtxt {
+				background-color: white;
+				opacity: 0.4;
+				border: 2px solid green;
+				text-align: center;
+				border-width: 4px;
+			}
+			@keyframes bttnanim {
+				0% {border-color: green;}
+				50% {border-color: red;}
+			}
+			.whitetxt {
+				color: white;
+				font-size: 16px;
+			}
 		</style>
 			<div class="dropdown">
 			<button class="dropbtn" id="dropdown">Select Animal</button>
@@ -130,35 +172,28 @@
 			</div>
 		</div>
 		<br>
-		<h3 id="desctitle"></h3>
-		<p id="desc"></p>
+		<h3 class="center" id="desctitle"></h3>
+		<p class="center whitetxt" id="desc"></p>
 		<br>
-		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Click Here for the Author of the Picture</a>
 	</div>
 	<br>
 	<br>
-	<div>
-	  <p id="secret" style="display:none">The Secret Text is hiding in plain sight</p>
+	<div class="center">
+	  <p class="center" id="secret" style="display:none">The Secret Text is hiding in plain sight</p>
 	  <button type="button" onclick="document.getElementById('secret').style.display = 'block'">A Secret</button>
 	</div>
 	<br>
 	<br>
-	<div>
+	<div class="center">
 	  <h4 id="sraczka"></h4>
 	  <button onclick="document.getElementById('sraczka').innerHTML='The Monkey is showing a Middle Finger.'">Monkey</button>
 	  <button onclick="document.getElementById('sraczka').innerHTML = 'Angry Cute Cat is sitting.'">Cat</button>
 	</div>
 	<br>
-	<div>
-	  <form>
-	    <input type="text" name="quiz" placeholder="What Animals shows middle Finger?"
-		<button type="submit" id="submit">Submit</button>
-	  </form>
-	</div>
 	<br>
 	<div>
 	  <footer>
-	    <h5 style="color:Tomato;">This Site is only a Testing Ground of my basic skills of HTML</h5>
+	    <h5 class="bttmtxt">This Site is only a Testing Ground of my basic skills of HTML</h5>
 	  </footer>
 	</div>
   </body>
